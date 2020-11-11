@@ -3,7 +3,7 @@ public class StatsService {
         StatServ service = new StatServ();
         int[] orders = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int ordersTotal = service.calculateSum(orders); //
+        int ordersTotal = service.calculateSum(orders); 
         int period = orders.length;
         float ordersAverage = ordersTotal/period;
         int maxOrdersMonth = service.numberMaxOrders(orders);
@@ -23,7 +23,7 @@ class StatServ {
         return sum;
 
     }
-    public int numberMaxOrders(int[] orders){
+    public int numberMaxOrders(int[] orders){ // метод находит только одно (первое) максимальное значение
         int index = 0;
         int indexMax = 0;
         int currentMax = orders[0];
@@ -36,7 +36,7 @@ class StatServ {
         }
         return indexMax+1;
     }
-    public int numberMinOrders(int[] orders){
+    public int numberMinOrders(int[] orders){ // метод находит только одно (первое) минимальное значение
         int index = 0;
         int indexMin = 0;
         int currentMin = orders[0];
